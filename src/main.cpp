@@ -24,5 +24,10 @@ int main() {
     vector<Contour> raw_contours = ContourExtractor::extractContours(grid);
     
     cout << "Phase 1 & Phase 2 compiled and executed successfully!\n";
+
+    // 3. Run Path Optimization
+    vector<Contour> clean_contours = PathOptimizer::simplifyContours(raw_contours, 1.0);
+
+    cout << "Phase 3 Optimization completed succesfully!\n";
     return 0;
 }
